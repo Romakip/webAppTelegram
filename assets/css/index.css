@@ -1,0 +1,37 @@
+/*body {*/
+/*    width: 50%;*/
+/*}*/
+
+
+.container {
+    background: gold;
+    width: 500px;
+}
+
+.container .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.container .menu .item-menu {
+    text-align: center;
+    margin: 10px;
+}
+
+.container .menu .item-menu img {
+    width: 150px;
+}
+
+.container .menu .item-menu .add-basket {
+    background: seagreen;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+.container .menu .item-menu .add-basket:hover {
+    box-shadow: 1px 1px 1px 2px black;
+    cursor: pointer;
+}
