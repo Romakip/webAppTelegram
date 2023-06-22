@@ -1,11 +1,7 @@
-/*body {*/
-/*    width: 50%;*/
-/*}*/
-
-
 .container {
     background: gold;
     max-width: 390px;
+    box-shadow: 1px 1px 1px 1px black;
 }
 
 .container .menu {
@@ -34,4 +30,23 @@
 .container .menu .item-menu .add-basket:hover {
     box-shadow: 1px 1px 1px 2px black;
     cursor: pointer;
+}
+
+.container .buttons {
+    margin-top: 3%;
+    align-content: center;
+}
+
+.container .buttons .button-item {
+    text-decoration: none;
+    background: seagreen;
+    border: none;
+    width: 100%;
+    padding: 5%;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+.container .buttons .button-item:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 2px black;
 }
