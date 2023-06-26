@@ -1,6 +1,13 @@
 .container {
     background: gold;
     max-width: 390px;
+}
+
+.container .display-none {
+    display: none;
+}
+
+.container .container-menu {
     box-shadow: 1px 1px 1px 1px black;
 }
 
@@ -53,4 +60,34 @@
 .container .buttons .button-item:hover {
     cursor: pointer;
     box-shadow: 1px 1px 1px 2px black;
+}
+
+.container .container-pay {
+    text-align: center;
+    padding: 3% 0;
+}
+
+.container .container-pay form {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 3%;
+}
+
+.container .container-pay .data-input {
+    margin: 3%;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    grid-gap: 10px;
+}
+
+.container .container-pay .data-input input {
+    height: 23px;
+    border-radius: 10%;
+    border-color: black;
+}
+
+.container .container-pay #payButton {
+    margin-top: 3%;
+    cursor: pointer;
+    padding: 1%;
 }

@@ -4,6 +4,8 @@ const apiUrl = "https://jsonplaceholder.typicode.com/posts";
 
 document.addEventListener('DOMContentLoaded', function() {
     getProducts();
+    pay();
+    finishOrder();
 });
 
 let countProductsValue = 0,
@@ -84,4 +86,40 @@ let showProduct = function(item) {
 
     itemMenuDiv.append(itemMenuTitleDiv, itemMenuImg, itemMenuPriceDiv, addBasketButton);
     document.getElementById("menu").append(itemMenuDiv);
+}
+
+let pay = function() {
+    let payButton = document.getElementById("pay");
+    payButton.addEventListener("click", function() {
+       let containerMenu = document.querySelectorAll(".container-menu"),
+           containerPay = document.querySelectorAll(".container-pay");
+
+       containerMenu[0].classList = "display-none";
+       containerPay[0].classList.toggle("display-none");
+    });
+}
+
+let finishOrder = function() {
+    let finishOrder = document.getElementById("formPay");
+    finishOrder.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        console.log(formData.get("name"));
+        const formDataObject = {
+          name: formData.get("name"),
+          phone: formData.get("name"),
+          email: formData.get("name"),
+          address: formData.get("name")
+        };
+
+        const request = new Request("http://action",
+            {
+                    method: "POST",
+                    body: JSON.stringify(formDataObject)
+                });
+
+        request.json().then(function() {
+            alert("Успешно оформлен")
+        });
+    });
 }
