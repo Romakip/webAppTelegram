@@ -1,6 +1,9 @@
 //Initialization constants
 const removeBasketClassName = "remove-basket";
 const apiUrl = "https://jsonplaceholder.typicode.com/posts";
+const telegram = window.Telegram.WebApp;
+
+// console.log(telegram.initDataUnsafe.user.id);
 
 document.addEventListener('DOMContentLoaded', function() {
     getProducts();
@@ -65,14 +68,14 @@ let getProducts = async function() {
 };
 
 let showProduct = function(item) {
-    console.log(item.title);
+    // console.log(item.title);
 
     let itemMenuDiv = document.createElement("div");
     itemMenuDiv.classList = "item-menu";
 
     let itemMenuTitleDiv = document.createElement("div");
     itemMenuTitleDiv.classList = "item-menu-title";
-    itemMenuTitleDiv.innerHTML = item.title.slice(0, 5);
+    itemMenuTitleDiv.innerHTML = item.title.slice(0, 5) + telegram.initDataUnsafe.user.id;
 
     let itemMenuImg = document.createElement("img");
     itemMenuImg.src = "assets/images/imageFood.jpg";
